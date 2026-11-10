@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A client-side password strength checker." />
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="checker-card" aria-labelledby="page-title">
+      <div class="brand-mark" aria-hidden="true">🔐</div>
+      <p class="eyebrow">SECURITY TOOL</p>
+      <h1 id="page-title">Password Strength Checker</h1>
+      <p class="subtitle">Check how strong your password is before you use it.</p>
+
+      <label for="password">Enter your password</label>
+      <div class="password-wrap">
+        <input id="password" type="password" placeholder="Type a password..." autocomplete="new-password" spellcheck="false" />
+        <button id="togglePassword" class="toggle" type="button" aria-label="Show password">Show</button>
+      </div>
+
+      <div class="meter-heading">
+        <span>Strength</span>
+        <strong id="strengthText" class="strength-label">Not entered</strong>
+      </div>
+      <div class="meter" role="progressbar" aria-label="Password strength" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0">
+        <span id="meterFill"></span>
+      </div>
+
+      <p id="feedback" class="feedback" aria-live="polite">Start typing to check your password.</p>
+
+      <div class="requirements">
+        <h2>Password requirements</h2>
+        <ul>
+          <li id="length"><span class="check">○</span> At least 8 characters</li>
+          <li id="lower"><span class="check">○</span> Lowercase letter (a–z)</li>
+          <li id="upper"><span class="check">○</span> Uppercase letter (A–Z)</li>
+          <li id="number"><span class="check">○</span> Number (0–9)</li>
+          <li id="symbol"><span class="check">○</span> Special character (!@#$...)</li>
+        </ul>
+      </div>
+
+      <div class="tip"><strong>Tip:</strong> Use a long, unique passphrase. Never reuse passwords across websites.</div>
+      <p class="privacy">Your password is checked in this browser only. It is not sent to a server or stored.</p>
+    </section>
+    <footer>Mini Project · HTML, CSS &amp; JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
